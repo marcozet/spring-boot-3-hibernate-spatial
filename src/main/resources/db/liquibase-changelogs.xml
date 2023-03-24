@@ -1,0 +1,17 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="FNL-1039" author="me">
+        <comment>inital setup</comment>
+        <createTable tableName="field">
+            <column name="id" type="uuid">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="event_message_body" type="jsonb"/>
+            <column name="state" type="text"/>
+            <column name="the_geom" type="geometry(polygon,4326)"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
