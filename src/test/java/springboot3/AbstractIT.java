@@ -11,12 +11,7 @@ import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.lifecycle.Startables;
 import org.testcontainers.utility.DockerImageName;
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, properties = {
-    "spring.test.database.replace=none",
-    "server.shutdown=graceful",
-//   ,"spring.jpa.show-sql=true"
-//   ,"spring.jpa.properties.hibernate.format_sql=true"
-})
+@SpringBootTest
 @ContextConfiguration(
     initializers = {
         AbstractIT.PostgresInitializer.class

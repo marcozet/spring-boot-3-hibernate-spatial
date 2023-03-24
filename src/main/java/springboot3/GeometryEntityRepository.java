@@ -14,4 +14,7 @@ public interface GeometryEntityRepository extends CrudRepository<GeometryEntity,
   @Query(value = "select st_extent(the_geom) from field", nativeQuery = true)
   Optional<Polygon> getExtentByNativeQuery();
 
+  @Query(value = "select envelope(geometry) from GeometryEntity")
+  Optional<Polygon> getEnvelope();
+
 }

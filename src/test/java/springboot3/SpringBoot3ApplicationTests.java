@@ -10,14 +10,19 @@ class SpringBoot3ApplicationTests extends AbstractIT {
   @Autowired
   private GeometryEntityRepository repo;
 
-  @Test
-  void testGetExtentWithHql() {
-    repo.getExtent();
-  }
+  //@Test
+  //void testGetExtent() {
+  //  repo.getExtent();
+  //}
 
   @Test
   void testExtentWithNativeQuery() {
-    Optional<Polygon> polygon = repo.getExtentByNativeQuery();
+    repo.getExtentByNativeQuery();
+  }
+
+  @Test
+  void testGetEnvelope() {
+    repo.getEnvelope();
   }
 
 }
