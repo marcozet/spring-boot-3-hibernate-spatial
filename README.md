@@ -1,5 +1,5 @@
 # Problem
-Testing spatial function extent with Spring Boot 3.0.4 and hibernate-spatial 6.1.7...
+Testing spatial / PostGIS function st_extent with Spring Boot 3.0.4 and hibernate-spatial 6.1.7...
 
 [SpringBoot3ApplicationTests](src/test/java/springboot3/SpringBoot3ApplicationTests.java)
 
