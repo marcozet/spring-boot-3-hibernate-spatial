@@ -38,8 +38,8 @@ class PostGISFunctionTests extends AbstractIT {
   class GetExtent {
 
     @Test
-    void testGetExtentByHQLQuery() {
-      Optional<Polygon> polygon = repo.getExtentByHQLQuery();
+    void testGetExtentByJPQL() {
+      Optional<Polygon> polygon = repo.getExtentByJPQL();
       Assert.assertTrue(polygon.isPresent());
     }
 
@@ -60,8 +60,8 @@ class PostGISFunctionTests extends AbstractIT {
   class GetEnvelope {
 
     @Test
-    void testGetEnvelopeByHQLQuery() {
-      Optional<Polygon> polygon = repo.getEnvelopeByHQLQuery();
+    void testGetEnvelopeByJPQL() {
+      Optional<Polygon> polygon = repo.getEnvelopeByJPQL();
       Assert.assertTrue(polygon.isPresent());
     }
 

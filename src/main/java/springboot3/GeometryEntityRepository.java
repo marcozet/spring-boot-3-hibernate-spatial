@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.Query;
 public interface GeometryEntityRepository extends JpaRepository<GeometryEntity, UUID> {
 
   @Query(value = "select extent(geometry) from GeometryEntity")
-  Optional<Polygon> getExtentByHQLQuery();
+  Optional<Polygon> getExtentByJPQL();
 
   @Query(value = "select st_extent(geometry) from GeometryEntity")
   Optional<Polygon> getExtentByST_PrefixedFunctionName();
@@ -18,7 +18,7 @@ public interface GeometryEntityRepository extends JpaRepository<GeometryEntity, 
   Optional<Polygon> getExtentByNativeQuery();
 
   @Query(value = "select envelope(geometry) from GeometryEntity")
-  Optional<Polygon> getEnvelopeByHQLQuery();
+  Optional<Polygon> getEnvelopeByJPQL();
 
   @Query(value = "select st_envelope(geometry) from GeometryEntity")
   Optional<Polygon> getEnvelopeByST_PrefixedFunctionName();
