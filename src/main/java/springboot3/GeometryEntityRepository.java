@@ -16,4 +16,13 @@ public interface GeometryEntityRepository extends JpaRepository<GeometryEntity, 
 
   @Query(value = "select st_extent(the_geom) from geometry_entity", nativeQuery = true)
   Optional<Polygon> getExtentByNativeQuery();
+
+  @Query(value = "select envelope(geometry) from GeometryEntity")
+  Optional<Polygon> getEnvelopeByHQLQuery();
+
+  @Query(value = "select st_envelope(geometry) from GeometryEntity")
+  Optional<Polygon> getEnvelopeByST_PrefixedFunctionName();
+
+  @Query(value = "select st_envelope(the_geom) from geometry_entity", nativeQuery = true)
+  Optional<Polygon> getEnvelopeByNativeQuery();
 }

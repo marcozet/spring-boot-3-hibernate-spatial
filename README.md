@@ -5,7 +5,7 @@ Details described in https://hibernate.atlassian.net/browse/HHH-16369.
 
 Run "mvn clean verify" to reproduce the error.
 
-See also [SpringBoot3ApplicationTests](src/test/java/springboot3/SpringBoot3ApplicationTests.java)
+See also [PostGISFunctionTests](src/test/java/springboot3/PostGISFunctionTests.java)
 
 
 
