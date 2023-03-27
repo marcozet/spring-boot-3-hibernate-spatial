@@ -14,6 +14,6 @@ public interface GeometryEntityRepository extends JpaRepository<GeometryEntity, 
   @Query(value = "select st_extent(geometry) from GeometryEntity")
   Optional<Polygon> getExtentByST_PrefixedFunctionName();
 
-  @Query(value = "select st_extent(the_geom) from field", nativeQuery = true)
+  @Query(value = "select st_extent(the_geom) from geometry_entity", nativeQuery = true)
   Optional<Polygon> getExtentByNativeQuery();
 }

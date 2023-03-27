@@ -11,7 +11,7 @@ import org.hibernate.annotations.GenericGenerator;
 import org.locationtech.jts.geom.Polygon;
 
 @Entity
-@Table(name = "field")
+@Table(name = "geometry_entity")
 @Data
 public class GeometryEntity {
 
